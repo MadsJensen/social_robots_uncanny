@@ -12,7 +12,7 @@ chs = [
     'CP1', 'CP5', 'CP2', 'CP6', 'Pz', 'P3', 'P7', 'P4', 'p8', 'Oz', 'O1', 'O2'
 ]
 conditions = ['1', '2', '3', '4', '5']
-times = [0.109, 0.232]  # times to extract
+times = [0.109, 0.232, 0.420]  # times to extract
 
 epochs = mne.read_epochs(data_path + "%s-epo.fif" % subject)
 epochs.set_eeg_reference()

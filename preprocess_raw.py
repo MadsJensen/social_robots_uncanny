@@ -14,6 +14,7 @@ consensus_percs = np.linspace(0, 1.0, 11)
 
 # Epoch parameters
 tmin, tmax = -0.2, 0.5
+
 event_id = {
     'A/1': 20,
     'A/2': 22,
@@ -55,7 +56,10 @@ raw.filter(1, None)  # highpass filter
 raw.set_montage(montage)  # tell mne where the channels are located; standard
 #  10-20
 
-events = mne.find_events(raw)  # find the time of events, i.e. triggers, in the
+mne.events_from_annotations
+events = mne.find_events(raw, stim_channel='sti')  # find the time of
+# events, i.e. triggers,
+# in the
 # data
 
 picks = mne.pick_types(
