@@ -56,8 +56,7 @@ raw.filter(1, None)  # highpass filter
 raw.set_montage(montage)  # tell mne where the channels are located; standard
 #  10-20
 
-mne.events_from_annotations
-events = mne.find_events(raw, stim_channel='sti')  # find the time of
+events = mne.find_events(raw)  # find the time of
 # events, i.e. triggers,
 # in the
 # data
